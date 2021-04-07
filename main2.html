@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Online Class Summarizer</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+html, body {
+	background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("C:\\Users\\Amritha\\Desktop\\fyp_code\\new_code\\bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100%;
+} 
+.card{
+height: 40%;
+position: fixed;
+text-align: left;
+left: 25%; top: 25%;
+width: 50%;
+padding-left: 20px; padding-right: 20px;
+background-color: rgba(255,255,255,75%); 
+}
+</style>
+
+<script type="text/javascript">
+	document.getElementById("submit").onClick = function () {
+		var div = document.createElement('div');
+		div.style.background-color = "white";
+		div.style.left = "25%";
+       	div.style.top = "50%";
+       	div.innerHTML = "Processing...";
+       	document.body.appendChild(div);
+	}
+	
+</script>
+</head>
+	
+
+<body method="post">
+	<nav class="navbar navbar-light bg-dark">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#"><h1 style="color: white;">Online Class Summarizer</h1></a>
+	  </div>
+	</nav>
+	<div class="card">
+	
+    	
+    	<br>
+    	<p class="lead">Upload any recording of an online class to get a detailed slide by slide summary.</p>
+    	<br>
+    	<div id = "summarizer">
+		<form name="passdata" action="/upload" method="post" >
+			
+			<input type = "text" id = "videopath" name = "videopath"  class="form-control" style="width: 100%;"  placeholder="Enter videopath here" >
+			<div class="lead">Or</div>
+			<input type = "text" id = "videolink" name = "videolink" class="form-control" style="width: 100%" placeholder="Enter video url link here"  >
+			<br>
+			<input id="submit" type = "submit" value = "Submit" class="form-control bg-dark" style="color: white;">
+
+		</form>
+		
+		</div>
+
+ 	
+ 	</div>
+	
+</body>
+
+</html>
+
+      
